@@ -31,8 +31,9 @@ let beastmode = {
     }
 }
 
+console.log(beastmode.sigma);
 console.log(beastmode.kæledyr.type);
-beastmode.hobbier.forEach(function(hobby){
+beastmode.hobbier.forEach(function (hobby) {
     console.log(hobby)
 });
 
@@ -40,3 +41,25 @@ console.log("Opgave 2 færdig");
 
 
 // Opgave 3
+
+let divver = document.createElement("div")
+
+divver.textContent = "dette er en ny div"
+
+document.body.append(divver)
+
+let elever = [
+    {name: "manse", age: "17", course: "webudvilker"},
+    {name: "lukas", age: "18", course: "freakyville"},
+    {name: "orizi", age: "21", course: "gammel mand"}
+]
+
+let eleverListeDiv = document.querySelector(".elev-liste")
+
+elever.forEach(function(elev){
+    let elevDiv = document.createElement("div")
+    elevDiv.classList.add("student")
+    elevDiv.textContent = elev.name + ', Alder ' + elev.age + ', Uddannelse: ' + elev.course
+    eleverListeDiv.append(elevDiv)
+})
+
